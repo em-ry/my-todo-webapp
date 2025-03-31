@@ -30,3 +30,4 @@ for todo in todos:
 st.text_input(label="Type your todo", label_visibility="hidden",
               placeholder="Add a todo...", on_change=add_todo,
               key="new_todo")
+
