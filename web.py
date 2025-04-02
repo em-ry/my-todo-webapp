@@ -9,6 +9,8 @@ def add_todo():
     if new_todo not in todos:
         todos.append(new_todo)
         functions.write_todos(todos)
+        # Clear the input box after hitting enter
+        st.session_state["new_todo"] = ""
     else:
         st.warning("No duplicate todo items!!")
 
@@ -30,4 +32,3 @@ for index, todo in enumerate(todos):
 st.text_input(label="Type your todo", label_visibility="hidden",
               placeholder="Add a todo...", on_change=add_todo,
               key="new_todo", value="")
-
