@@ -13,7 +13,7 @@ def add_todo():
         st.warning("No duplicate todo items!!")
 
 
-st.title("My Todo App")
+st.title("Quick Online Todo App")
 st.subheader("A minimalist todo app")
 
 # remove completed todos
@@ -29,6 +29,5 @@ for index, todo in enumerate(todos):
 # the on_change attribute is a callback function(takes a custom function)
 st.text_input(label="Type your todo", label_visibility="hidden",
               placeholder="Add a todo...", on_change=add_todo,
-              key="new_todo")
+              key="new_todo", value="")
 
-st.session_state
